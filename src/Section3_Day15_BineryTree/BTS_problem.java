@@ -64,6 +64,26 @@ class MyBinarySearchTree {
 
         return node;
     }
+    public boolean search(int data) {
+        return searchRec(root, data);
+    }
+
+    private boolean searchRec(INode node, int data) {
+        if (node == null) {
+            return false;
+        }
+
+        if (data == node.getData()) {
+            return true;
+        }
+
+        if (data < node.getData()) {
+            return searchRec(node.getLeft(), data);
+        } else {
+            return searchRec(node.getRight(), data);
+        }
+    }
+
 }
 
 
@@ -74,5 +94,11 @@ public class BTS_problem {
         bst.insert(56);
         bst.insert(30);
         bst.insert(70);
+
+        if (bst.search(80)){
+            System.out.println("Present ");
+        }else {
+            System.out.println("Not Present");
+        }
     }
 }
