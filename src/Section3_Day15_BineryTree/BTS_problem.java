@@ -40,6 +40,9 @@ class MyBinaryNode implements INode {
     }
 }
 
+
+
+
 class MyBinarySearchTree {
     private INode root;
 
@@ -64,10 +67,11 @@ class MyBinarySearchTree {
 
         return node;
     }
+
+
     public boolean search(int data) {
         return searchRec(root, data);
     }
-
     private boolean searchRec(INode node, int data) {
         if (node == null) {
             return false;
@@ -85,9 +89,6 @@ class MyBinarySearchTree {
     }
 
 }
-
-
-
 public class BTS_problem {
     public static void main(String[] args) {
         MyBinarySearchTree bst = new MyBinarySearchTree();
