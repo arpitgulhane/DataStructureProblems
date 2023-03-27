@@ -8,7 +8,8 @@ public class FindYourNumber {
         Scanner scanner = new Scanner(System.in);
 
         // Read the value of N from the command line argument
-        int N = Integer.parseInt(args[0]);
+        String args2[]=new String[6];
+        int N = Integer.parseInt(args2[0]);
 
         // Calculate the number of questions required to guess the number
         int n = (int) (Math.log(N) / Math.log(2));
